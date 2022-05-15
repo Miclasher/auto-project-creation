@@ -1,8 +1,11 @@
 
+from lib2to3.pgen2 import driver
+
+
 def createNewProject(projectName):
     import os
     from time import sleep
-    directory1 = r'C:\Users\Miclasher\Documents\MyProjects\testFolderForTestProjects'
+    directory1 = r'C:\Users\Miclasher\Documents\MyProjects'
     os.chdir(directory1)
     os.mkdir(projectName)
     f = open('{0}\{1}\{2}'.format(directory1, projectName, 'README.md'), 'w')
