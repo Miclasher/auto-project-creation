@@ -1,8 +1,5 @@
 
-from lib2to3.pgen2 import driver
-
-
-def createNewProject(projectName):
+def createNewProject(projectName, url):
     import os
     from time import sleep
     directory1 = r'C:\Users\Miclasher\Documents\MyProjects'
@@ -19,11 +16,11 @@ def createNewProject(projectName):
     os.popen('git commit -m "Initial commit"')
     sleep(1.5)
     os.popen('git branch -M main')
-    sleep(1)
-    os.popen('git remote add origin {0}'.format('https://github.com/Miclasher/test.git'))
+    sleep(0.5)
+    os.popen('git remote add origin {0}'.format(url))
     sleep(1)
     os.popen('git remote -v')
     sleep(1)
     os.popen('git push -u origin main')
-    sleep(7)
-createNewProject('test')
+    sleep(5)
+createNewProject(input('Name:'), input('URL:') )
