@@ -2,7 +2,8 @@
 def createNewProject(projectName, url):
     import os
     from time import sleep
-    directory1 = r'C:\Users\Miclasher\Documents\MyProjects'
+    username = os.getlogin()
+    directory1 = r'C:\Users\{0}\Documents\MyProjects'.format(username)
     os.chdir(directory1)
     os.mkdir(projectName)
     f = open('{0}\{1}\{2}'.format(directory1, projectName, 'README.md'), 'w')
